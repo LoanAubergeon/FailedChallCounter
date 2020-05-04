@@ -13,6 +13,7 @@ class App extends Component {
     super(props);
     if (!firebase.apps.length) {
       firebase.initializeApp(config)
+      firebase.analytics();
     }
     this.state = {
       data: [],
