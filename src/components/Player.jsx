@@ -19,7 +19,7 @@ class Player extends React.Component {
             }}>
             <div class="columns">
             <div class="column is-4">
-                <img src={'./../' + nom + '.png'} alt="" class="player-img"/>
+                {/* <img src={'./../' + nom + '.png'} alt="" class="player-img"/> */}
             </div>
             <div class="column text is-4">
                 <h2 class="title">{nom}</h2>
