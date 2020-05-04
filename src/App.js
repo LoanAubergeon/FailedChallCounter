@@ -18,7 +18,8 @@ class App extends Component {
     this.state = {
       data: [],
       loading: true,
-      selectedPlayerId: -1
+      selectedPlayerId: -1,
+      disabled: false,
     };
   }
 
@@ -48,6 +49,13 @@ class App extends Component {
   }
 
   updateCount(newValue, playerName) {
+    this.setState({
+      disabled: true,
+      });
+    setTimeout(() => { 
+      this.setState({
+        disabled: false,
+      }); }, 10000);
     const ref = firebase.database().ref('players')
     let newState = [...this.state.data]
     const index = this.state.data.findIndex(player => (player.nom === playerName));
@@ -87,6 +95,7 @@ class App extends Component {
             <div class="column is-1"></div>
             <div class="column is-1">
               <button
+                disabled={this.state.disabled}
                 class="button is-primary is-inverted"
                 onClick={ () =>{ this.updateCount(player.value + 1,player.nom)}}>
                 +
@@ -95,6 +104,7 @@ class App extends Component {
             <div class="column is-1"></div>
             <div class="column is-1">
               <button
+                disabled={this.state.disabled}
                 class="button is-danger is-inverted" 
                 onClick={ () => {
                   this.updateCount(player.value - 1,player.nom)}}
