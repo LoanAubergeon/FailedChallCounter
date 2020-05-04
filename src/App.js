@@ -61,7 +61,6 @@ class App extends Component {
     } catch (error) {
       console.log(error);
     }
-    
   }
 
   selectPlayer(id) {
@@ -96,7 +95,8 @@ class App extends Component {
             <div class="column is-1">
               <button
                 class="button is-danger is-inverted" 
-                onClick={ () => {this.updateCount(player.value - 1,player.nom)}}
+                onClick={ () => {
+                  this.updateCount(player.value - 1,player.nom)}}
                 >
                   -
               </button>

@@ -3,19 +3,10 @@ import 'bulma/css/bulma.css'
 import '../App.css';
 
 class Player extends React.Component {
-    incrementValue() {
-        
-    }
-
-    decrementValue() {
-        console.log('Cliqué -')
-    }
-
     render() {
     const {
         id,
         nom,
-        logo,
         value,
         selectPlayer,
         style
@@ -28,7 +19,7 @@ class Player extends React.Component {
             }}>
             <div class="columns">
             <div class="column is-4">
-                <img src={logo} alt="" class="exp-img"/>
+                <img src={'./../' + nom + '.png'} alt="" class="player-img"/>
             </div>
             <div class="column text is-4">
                 <h2 class="title">{nom}</h2>
