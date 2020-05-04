@@ -85,7 +85,7 @@ class App extends Component {
       ? (<div class="notification selector">
           <div class="columns">
             <div class="column is-2">
-              {/* <img src={logo} alt="" class="exp-img"/> */}
+              <img src={require('./'+ player.nom + '.png')} alt="" class="selector-img"/> 
             </div>
             <div class="column text is-4">
               <h2 class="title">{player.nom}</h2>
@@ -131,10 +131,10 @@ class App extends Component {
 
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <div class="main container">
         <div class="container mytitle">
-          <img src={logo} alt="" class="title-image"/>
+          <img src={logo} alt="" className="title-image"/>
           <h1 class="maintitle">Failed challenge</h1>
           <h1 class="mysubtitle">leaderboard</h1>
         </div>

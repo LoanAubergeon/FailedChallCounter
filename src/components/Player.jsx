@@ -18,9 +18,10 @@ class Player extends React.Component {
                 selectPlayer(id);
             }}>
             <div class="columns">
-            <div class="column is-4">
-                {/* <img src={'./../' + nom + '.png'} alt="" class="player-img"/> */}
+            <div class="column is-2">
+                <img src={require('../' + nom + '.png')} alt="" class="player-img"/> 
             </div>
+            <div class="column is-2"></div>
             <div class="column text is-4">
                 <h2 class="title">{nom}</h2>
             </div>

@@ -33,7 +33,16 @@
 }
 
 .player-img {
-  
+  width: 20%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.selector-img {
+  width: 30%;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 7px;
 }
 
 .selector {
