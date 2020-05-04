@@ -87,12 +87,9 @@ class App extends Component {
             <div class="column is-2">
               <img src={require('./'+ player.nom + '.png')} alt="" class="selector-img"/> 
             </div>
-            <div class="column text is-4">
-              <h2 class="title">{player.nom}</h2>
+            <div class="column text is-8">
+              <h2 class="selector-title">{player.nom}</h2>
             </div>
-            <div class="column text is-2">
-            </div>
-            <div class="column is-2"></div>
             <div class="column is-1">
               <button
                 disabled={this.state.disabled}
@@ -114,7 +111,7 @@ class App extends Component {
       </div>
       </div> 
         )
-      : <div className="notification selector">Click a player to select</div>;
+      : <div className="notification selector">Sélectionnez un joueur (Jambe par exemple)</div>;
   };
 
   spinner() {
