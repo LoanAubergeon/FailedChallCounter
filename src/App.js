@@ -1,58 +1,91 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bulma/css/bulma.css'
-import db from './Firebase';
+import config from './config';
+import * as firebase from 'firebase'
 
 import Player from './components/Player'
 class App extends Component {
   constructor(props) {
     super(props);
-    const ref = db.database().ref();
-    this.database = ref.child("chall-counter");
-    this.unsubscribe = null;
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config)
+    }
     this.state = {
-      data: []
+      data: [],
+      loading: true
     };
   }
 
   async componentDidMount() {
+    const ref = firebase.database().ref('players')
     try {
-      this.database.on("value", snapshot => {
-        console.log(snapshot.val())
+      ref.on('value', snapshot => {
+        this.setState({
+          data: snapshot.val(),
+          loading: false
+        })
         let data = [];
         snapshot.forEach((snap) => {
           data.push(snap.val());
         });
-        console.log("Data", data)
         this.setState({ data });
       });
     } catch (error) {
-      console.log('BUG');
+      console.log(error);
     }
   }
+  sortData() {
+    let sortedData = this.state.data.sort((a, b) => a.value < b.value);
+    this.setState({
+      data: sortedData
+    });
+  }
+
+  handleCount(newValue, playerName) {
+    const ref = firebase.database().ref('players')
+    let newState = [...this.state.data]
+    const index = this.state.data.findIndex(player => (player.nom === playerName));
+    newState[index] = {...newState[index], value: newValue}
+    this.setState({
+      data: newState,
+      });
+    
+    try{
+      //ref.child(index).update({value: newValue})
+      ref.set(this.state.data.sort((a, b) => a.value < b.value))
+    } catch (error) {
+      console.log(error);
+    }
+    
+  }
+  
 
   render() {
-    console.log(this.database);
     return (
-      <div className="App">
-        <div class="container is-primary">
-          <h1>Failed chall counter</h1>
+      <div class="App">
+        <div class="main container">
+        <div class="container mytitle">
+          <h1 class="title is-1">Failed chall counter</h1>
         </div>
-        <div class="container">
-          <div class="tile">
-            <ul class="tile is-vertical is-8">
+        <div class="container has-text-centered">
+          <div class="tile mytile">
+            <ul class="tile is-vertical players">
               {
-                this.state.data.map((player) => {
+                this.state.data.map( (player, i) => {
                   return (
                     <Player 
-                      nom={player.name} 
+                      nom={player.nom} 
                       value={player.value}
+                      updateCount={this.handleCount.bind(this)}
+                      key={i}
                       />
                   )
                 })
               }
             </ul>
           </div>
+        </div>
         </div>
       </div>
     );
