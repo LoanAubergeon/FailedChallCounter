@@ -3,8 +3,11 @@ import './App.css';
 import 'bulma/css/bulma.css'
 import config from './config';
 import * as firebase from 'firebase'
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 import Player from './components/Player'
+
+import logo from './winner.png'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +16,8 @@ class App extends Component {
     }
     this.state = {
       data: [],
-      loading: true
+      loading: true,
+      selectedPlayerId: -1
     };
   }
 
@@ -42,7 +46,7 @@ class App extends Component {
     });
   }
 
-  handleCount(newValue, playerName) {
+  updateCount(newValue, playerName) {
     const ref = firebase.database().ref('players')
     let newState = [...this.state.data]
     const index = this.state.data.findIndex(player => (player.nom === playerName));
@@ -52,40 +56,108 @@ class App extends Component {
       });
     
     try{
-      //ref.child(index).update({value: newValue})
-      ref.set(this.state.data.sort((a, b) => a.value < b.value))
+      ref.child(index).update({value: newValue})
+      //ref.set(this.state.data.sort((a, b) => a.value < b.value))
     } catch (error) {
       console.log(error);
     }
     
   }
-  
+
+  selectPlayer(id) {
+    this.setState({
+      selectedPlayerId: id
+    });
+  };
+
+  getBottomBar() {
+    const id = this.state.selectedPlayerId;
+    const player = this.state.data[id];
+    return (id !== -1 )
+      ? (<div class="notification selector">
+          <div class="columns">
+            <div class="column is-2">
+              {/* <img src={logo} alt="" class="exp-img"/> */}
+            </div>
+            <div class="column text is-4">
+              <h2 class="title">{player.nom}</h2>
+            </div>
+            <div class="column text is-2">
+            </div>
+            <div class="column is-1"></div>
+            <div class="column is-1">
+              <button
+                class="button is-primary is-inverted"
+                onClick={ () =>{ this.updateCount(player.value + 1,player.nom)}}>
+                +
+              </button>
+            </div>
+            <div class="column is-1"></div>
+            <div class="column is-1">
+              <button
+                class="button is-danger is-inverted" 
+                onClick={ () => {this.updateCount(player.value - 1,player.nom)}}
+                >
+                  -
+              </button>
+      </div> 
+      </div>
+      </div> 
+        )
+      : <div className="notification selector">Click a player to select</div>;
+  };
+
+  spinner() {
+    return (
+      <div className="sweet-loading spinner">
+        <ScaleLoader
+          size={150}
+          color={"white"}
+          loading={this.state.loading}
+        />
+      </div>)
+  }
 
   render() {
     return (
       <div class="App">
         <div class="main container">
         <div class="container mytitle">
-          <h1 class="title is-1">Failed chall counter</h1>
+          <img src={logo} alt="" class="title-image"/>
+          <h1 class="maintitle">Failed challenge</h1>
+          <h1 class="mysubtitle">leaderboard</h1>
         </div>
         <div class="container has-text-centered">
           <div class="tile mytile">
+            {this.state.loading ? this.spinner() :
             <ul class="tile is-vertical players">
               {
                 this.state.data.map( (player, i) => {
+                  let style = {};
+                  if (this.state.selectedPlayerId === i) {
+                    style['background-color'] = 'rgb(210, 210, 210)';
+                  }
                   return (
                     <Player 
-                      nom={player.nom} 
+                      nom={player.nom}
+                      id={i} 
                       value={player.value}
-                      updateCount={this.handleCount.bind(this)}
+                      selectPlayer={this.selectPlayer.bind(this)}
                       key={i}
+                      style={style}
                       />
                   )
                 })
               }
-            </ul>
+            </ul>}
           </div>
         </div>
+        <div class="container has-text-centered">
+          {this.getBottomBar()}
+        </div>
+        <div class="container bottom" onClick={() => {
+                this.selectPlayer(-1);
+            }}></div>
         </div>
       </div>
     );

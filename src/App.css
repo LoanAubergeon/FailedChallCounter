@@ -5,13 +5,19 @@
 .main {
   background: cornflowerblue;
   height: 100vh;
-  max-width: 700px;
+  max-width: 1000px !important;
+}
+
+.spinner {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mytitle {
   padding-top: 40px;
   padding-bottom: 40px;
-  background: pink;
 }
 
 .players {
@@ -19,10 +25,18 @@
 }
 
 .player {
+  z-index: 999;
   width: 65%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.selector {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
 }
 
 .text {
@@ -30,33 +44,58 @@
   margin-bottom: auto;
 }
 
-h1 {
+.title-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2.5em;
+  margin: 0 auto .75em;
+  width: 2.5em;
+}
+
+.maintitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+	font-size: 3.2em !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.1em !important;
+	line-height: 1em !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mysubtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+	font-size: 3em !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.4em !important;
+	line-height: 1em !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
-	font-size: 3.750em;
-	font-weight: 900;
-	letter-spacing: 0.1em;
-	line-height: 1em;
+	font-size: 1.1em !important;
+	font-weight: 400 !important;
+	line-height: 1em !important;
   text-transform: uppercase;
 }
 
-.player h2 {
+h3 {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
-	font-size: 3.750em;
-	font-weight: 600;
-	line-height: 1em;
-  text-transform: uppercase;
-}
-
-.player h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-	font-size: 3.750em;
-	font-weight: 900;
+	font-size: 1.1em !important;
+	font-weight: 900 !important;
   text-transform: uppercase;
 }
 
 ul {
   list-style: none
+}
+
+.bottom {
+  height: 8vh;
 }
