@@ -109,6 +109,11 @@ ul {
   list-style: none
 }
 
+.mybutton {
+  font-size: 1em !important;
+  font-weight: 500 !important;
+}
+
 .bottom {
   height: 8vh;
 }

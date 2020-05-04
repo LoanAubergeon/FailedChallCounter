@@ -92,20 +92,19 @@ class App extends Component {
             </div>
             <div class="column text is-2">
             </div>
-            <div class="column is-1"></div>
+            <div class="column is-2"></div>
             <div class="column is-1">
               <button
                 disabled={this.state.disabled}
-                class="button is-primary is-inverted"
+                class="button is-success mybutton"
                 onClick={ () =>{ this.updateCount(player.value + 1,player.nom)}}>
                 +
               </button>
             </div>
-            <div class="column is-1"></div>
             <div class="column is-1">
               <button
                 disabled={this.state.disabled}
-                class="button is-danger is-inverted" 
+                class="button is-danger mybutton" 
                 onClick={ () => {
                   this.updateCount(player.value - 1,player.nom)}}
                 >
