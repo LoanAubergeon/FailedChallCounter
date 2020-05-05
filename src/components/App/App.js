@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bulma/css/bulma.css'
-import config from './config';
+import config from '../Config/config';
 import * as firebase from 'firebase'
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-import Player from './components/Player'
+import Player from '../Player/Player'
 
-import logo from './winner.png'
+import logo from '../../images/winner.png'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +85,7 @@ class App extends Component {
       ? (<div class="notification selector">
           <div class="columns">
             <div class="column is-2">
-              <img src={require('./'+ player.nom + '.png')} alt="" class="selector-img"/> 
+              <img src={require('../../images/'+ player.nom + '.png')} alt="" class="selector-img"/> 
             </div>
             <div class="column text is-8">
               <h2 class="selector-title">{player.nom}</h2>

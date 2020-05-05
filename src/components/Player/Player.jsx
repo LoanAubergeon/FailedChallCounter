@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bulma/css/bulma.css'
-import '../App.css';
+import './Player.css';
 
 class Player extends React.Component {
     render() {
@@ -19,7 +19,7 @@ class Player extends React.Component {
             }}>
             <div class="columns">
             <div class="column is-2">
-                <img src={require('../' + nom + '.png')} alt="" class="player-img"/> 
+                <img src={require('../../images/' + nom + '.png')} alt="" class="player-img"/> 
             </div>
             <div class="column is-2"></div>
             <div class="column text is-4">
