@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+import './LeaderBoard.css';
 import 'bulma/css/bulma.css'
 import config from '../Config/config';
 import * as firebase from 'firebase'
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-import Player from '../Player/Player'
+import Player from './Player/Player'
 
 import logo from '../../images/winner.png'
-class App extends Component {
+class LeaderBoard extends Component {
   constructor(props) {
     super(props);
     if (!firebase.apps.length) {
@@ -171,4 +171,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default LeaderBoard;
