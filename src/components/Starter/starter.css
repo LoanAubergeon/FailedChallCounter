@@ -1,0 +1,107 @@
+.starter.main {
+	background: rgb(226, 169, 84);
+	height: 100%;
+	max-width: 1000px !important;
+}
+
+.starter.mytitle {
+	padding-top: 70px;
+	padding-bottom: 40px;
+}
+
+.starter.players {
+	padding-top: 40px;
+}
+
+.starter.text {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.starter.title-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 2.5em;
+	margin: 0 auto 0.75em;
+	width: 2.5em;
+}
+
+.starter.maintitle {
+	font-family: "Source Sans Pro", sans-serif;
+	color: black;
+	font-size: 3.5em !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.1em !important;
+	line-height: 1em !important;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.starter.mysubtitle {
+	font-family: "Source Sans Pro", sans-serif;
+	color: black;
+	font-size: 2.7em !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.4em !important;
+	line-height: 1em !important;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.starter h2 {
+	font-family: "Source Sans Pro", sans-serif;
+	color: black;
+	font-size: 1.1em !important;
+	font-weight: 400 !important;
+	line-height: 1em !important;
+	text-transform: uppercase;
+}
+
+.starter h3 {
+	font-family: "Source Sans Pro", sans-serif;
+	color: white;
+	font-size: 1.1em !important;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+}
+
+.starter ul {
+	list-style: none;
+}
+
+.starter.mybutton {
+	font-size: 1em !important;
+	font-weight: 500 !important;
+}
+
+.starter.bottom {
+	height: 64px;
+}
+
+.starter.player {
+	z-index: 999;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+.starter.player-img {
+	width: 20%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.starter.column{
+    display: inline;
+}
+
+.starter.mytoggle {
+    vertical-align: middle;
+}
+
+.starter.mycheckbox {
+    vertical-align: middle;
+    background: red;
+}
