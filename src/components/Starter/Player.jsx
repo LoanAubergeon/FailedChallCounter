@@ -14,7 +14,7 @@ class Player extends React.Component {
 		}
 
 		if (isPresent && !isReady) {
-			style['background'] = 'rgb(216, 86, 86)';
+			style['background'] = 'rgb(224, 86, 86)';
 		}
 
 		if (isPresent && isReady) {

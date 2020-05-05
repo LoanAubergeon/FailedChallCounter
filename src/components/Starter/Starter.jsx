@@ -54,10 +54,10 @@ class LeaderBoard extends Component {
 	}
 
 	setIsPresent(name) {
-        const ref = firebase.database().ref("isReady");
+		const ref = firebase.database().ref("isReady");
 		const index = this.state.data.findIndex((player) => player.nom === name);
 		const currentIsPrensent = this.state.data[index].isPresent;
-        try {
+		try {
 			ref.child(index).update({ isPresent: !currentIsPrensent });
 		} catch (error) {
 			console.log(error);
@@ -85,12 +85,18 @@ class LeaderBoard extends Component {
 	}
 
 	checkGo() {
+		const go = this.state.go;
 		const presentPlayers = this.state.presentPlayers;
 		const readyPlayers = this.state.readyPlayers;
+		let currentGo = false;
 		if ((presentPlayers.length === readyPlayers.length) & (readyPlayers.length > 0)) {
-			return true;
+			currentGo = true;
 		}
-		return false;
+		if (currentGo !== go) {
+			this.setState({
+				go: currentGo,
+			});
+		}
 	}
 
 	componentDidUpdate() {
@@ -107,12 +113,33 @@ class LeaderBoard extends Component {
 		);
 	}
 
+	resetReadyPlayers() {
+		const ref = firebase.database().ref("isReady");
+		let newState = [...this.state.data];
+
+		newState.forEach((player) => {
+			player.isReady = false;
+		});
+		try {
+			ref.set(newState);
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
 	render() {
+		let style = {};
+		if (this.state.go) {
+			style["backgroundColor"] = "rgb(138, 249, 178)";
+		}
 		return (
-			<div class='starter main container'>
-				{this.checkGo() ? (
+			<div class='starter main container' style={style}>
+				{this.state.go ? (
 					<div class='starter container mytitle'>
 						<h1 class='starter maintitle'>GO !!!</h1>
+						<button class='starter resetbutton button is-light' onClick={this.resetReadyPlayers.bind(this)}>
+							Reset
+						</button>
 					</div>
 				) : (
 					<div class='starter container mytitle'>

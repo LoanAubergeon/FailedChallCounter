@@ -1,5 +1,5 @@
 .starter.main {
-	background: rgb(226, 169, 84);
+	background: rgb(236, 186, 110);
 	height: 100%;
 	max-width: 1000px !important;
 }
@@ -103,5 +103,9 @@
 
 .starter.mycheckbox {
     vertical-align: middle;
-    background: red;
+    background: rgb(224, 86, 86);
+}
+
+.starter.resetbutton {
+    margin-top: 15px;
 }
