@@ -1,3 +1,4 @@
+/** Must be ignored */
 export default {
   apiKey: "AIzaSyBNtfu70bVaj2KiA0Tlpv7rSiFxQGt_His",
   authDomain: "chall-counter.firebaseapp.com",
