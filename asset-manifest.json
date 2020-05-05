@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/FailedChallCounter/static/css/main.1e4251a6.chunk.css",
-    "main.js": "/FailedChallCounter/static/js/main.7d82a7ca.chunk.js",
-    "main.js.map": "/FailedChallCounter/static/js/main.7d82a7ca.chunk.js.map",
+    "main.css": "/FailedChallCounter/static/css/main.cc696ea0.chunk.css",
+    "main.js": "/FailedChallCounter/static/js/main.4af32696.chunk.js",
+    "main.js.map": "/FailedChallCounter/static/js/main.4af32696.chunk.js.map",
     "runtime-main.js": "/FailedChallCounter/static/js/runtime-main.bb410392.js",
     "runtime-main.js.map": "/FailedChallCounter/static/js/runtime-main.bb410392.js.map",
-    "static/css/2.519e3fdd.chunk.css": "/FailedChallCounter/static/css/2.519e3fdd.chunk.css",
-    "static/js/2.bf5a61c3.chunk.js": "/FailedChallCounter/static/js/2.bf5a61c3.chunk.js",
-    "static/js/2.bf5a61c3.chunk.js.map": "/FailedChallCounter/static/js/2.bf5a61c3.chunk.js.map",
+    "static/css/2.3766ea63.chunk.css": "/FailedChallCounter/static/css/2.3766ea63.chunk.css",
+    "static/js/2.86c5ad60.chunk.js": "/FailedChallCounter/static/js/2.86c5ad60.chunk.js",
+    "static/js/2.86c5ad60.chunk.js.map": "/FailedChallCounter/static/js/2.86c5ad60.chunk.js.map",
     "index.html": "/FailedChallCounter/index.html",
-    "precache-manifest.1912809e2019078960b8c3cc7659ed65.js": "/FailedChallCounter/precache-manifest.1912809e2019078960b8c3cc7659ed65.js",
+    "precache-manifest.df2646298e23249c0778c58ce2530fcc.js": "/FailedChallCounter/precache-manifest.df2646298e23249c0778c58ce2530fcc.js",
     "service-worker.js": "/FailedChallCounter/service-worker.js",
-    "static/css/2.519e3fdd.chunk.css.map": "/FailedChallCounter/static/css/2.519e3fdd.chunk.css.map",
-    "static/css/main.1e4251a6.chunk.css.map": "/FailedChallCounter/static/css/main.1e4251a6.chunk.css.map",
-    "static/js/2.bf5a61c3.chunk.js.LICENSE.txt": "/FailedChallCounter/static/js/2.bf5a61c3.chunk.js.LICENSE.txt",
+    "static/css/2.3766ea63.chunk.css.map": "/FailedChallCounter/static/css/2.3766ea63.chunk.css.map",
+    "static/css/main.cc696ea0.chunk.css.map": "/FailedChallCounter/static/css/main.cc696ea0.chunk.css.map",
+    "static/js/2.86c5ad60.chunk.js.LICENSE.txt": "/FailedChallCounter/static/js/2.86c5ad60.chunk.js.LICENSE.txt",
     "static/media/Boutin.png": "/FailedChallCounter/static/media/Boutin.d08076dc.png",
     "static/media/Jambe.png": "/FailedChallCounter/static/media/Jambe.7a2f115c.png",
     "static/media/JeanD.png": "/FailedChallCounter/static/media/JeanD.55eff395.png",
@@ -24,9 +24,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bb410392.js",
-    "static/css/2.519e3fdd.chunk.css",
-    "static/js/2.bf5a61c3.chunk.js",
-    "static/css/main.1e4251a6.chunk.css",
-    "static/js/main.7d82a7ca.chunk.js"
+    "static/css/2.3766ea63.chunk.css",
+    "static/js/2.86c5ad60.chunk.js",
+    "static/css/main.cc696ea0.chunk.css",
+    "static/js/main.4af32696.chunk.js"
   ]
 }
