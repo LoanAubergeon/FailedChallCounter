@@ -7,7 +7,7 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 import Player from "./Player";
 
-import like from "../../sounds/go.wav";
+import like from "../../sounds/jb.wav";
 
 class LeaderBoard extends Component {
 	constructor(props) {
