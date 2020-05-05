@@ -7,6 +7,8 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 import Player from "./Player";
 
+import like from "../../sounds/go.wav";
+
 class LeaderBoard extends Component {
 	constructor(props) {
 		if (!firebase.apps.length) {
@@ -21,7 +23,8 @@ class LeaderBoard extends Component {
 			go: false,
 			loading: true,
 		};
-	}
+    }
+    
 
 	async componentDidMount() {
 		const ref = firebase.database().ref("isReady");
@@ -34,7 +37,10 @@ class LeaderBoard extends Component {
 				let data = [];
 				snapshot.forEach((snap) => {
 					data.push(snap.val());
-				});
+                });
+                // data.sort(function(x, y) {
+                //     return (x.isPresent === y.isPresent)? 0 : x.isPresent? -1 : 1;
+                // });
 				this.setState({ data });
 			});
 		} catch (error) {
@@ -90,13 +96,16 @@ class LeaderBoard extends Component {
 		const readyPlayers = this.state.readyPlayers;
 		let currentGo = false;
 		if ((presentPlayers.length === readyPlayers.length) & (readyPlayers.length > 0)) {
-			currentGo = true;
+            currentGo = true;
 		}
 		if (currentGo !== go) {
+            if (currentGo) {
+                this.playSound();
+            }
 			this.setState({
 				go: currentGo,
-			});
-		}
+            });
+        }
 	}
 
 	componentDidUpdate() {
@@ -125,9 +134,15 @@ class LeaderBoard extends Component {
 		} catch (error) {
 			console.log(error);
 		}
-	}
+    }
+    
+    playSound() {
+        const likeAudio = new Audio(like);
+        likeAudio.play();
+    }
 
 	render() {
+        
 		let style = {};
 		if (this.state.go) {
 			style["backgroundColor"] = "rgb(138, 249, 178)";
