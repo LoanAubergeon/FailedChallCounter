@@ -5,6 +5,9 @@ import "./starter.css";
 import { Checkbox } from "semantic-ui-react";
 
 class Player extends React.Component {
+	doNothing() {
+		let i = 0;
+	}
 	render() {
 		const { nom, isPresent, togglePresent, isReady, toggleReady } = this.props;
 		let style = {};
@@ -27,7 +30,7 @@ class Player extends React.Component {
 					class='notification starter player-notification'
 					style={style}
 					onClick={() => {
-						toggleReady(nom);
+						isPresent ? toggleReady(nom) : this.doNothing();
 					}}>
 					<div class='columns is-vcentered is-desktop'>
 						<div class='starter column is-1'>
