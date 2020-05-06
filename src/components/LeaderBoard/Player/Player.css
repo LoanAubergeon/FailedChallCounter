@@ -1,13 +1,36 @@
 .player {
-    z-index: 999;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-  
-  .player-img {
-    width: 20%;
-    height: auto;
-    vertical-align: middle;
-  }
+	z-index: 999;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+.player:hover {
+	transform: scaleX(1.05);
+	transition: all 500ms;
+	box-shadow: 0px 0px 8px black;
+}
+
+.player-img {
+	width: 20%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.player-img-winner {
+	width: 45%;
+	height: auto;
+	vertical-align: middle;
+	padding-top: -0.75rem;
+	padding-bottom: -0.75rem;
+}
+
+.selected-player {
+	background-color: red;
+	border-width: 2px;
+	border-style: solid;
+}

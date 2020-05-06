@@ -23,7 +23,7 @@ class Player extends React.Component {
 
 		return (
 			<li>
-				<div class='notification player' style={style}>
+				<div class='notification starter player-notification' style={style}>
 					<div class='columns'>
 						<div class='starter column is-2'>
 							<Checkbox
