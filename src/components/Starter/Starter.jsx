@@ -7,7 +7,8 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 import Player from "./Player";
 
-import like from "../../sounds/go.wav";
+import go from "../../sounds/go.wav";
+import ready from '../../sounds/ready.wav'
 
 class LeaderBoard extends Component {
 	constructor(props) {
@@ -100,7 +101,7 @@ class LeaderBoard extends Component {
 		}
 		if (currentGo !== go) {
             if (currentGo) {
-                this.playSound();
+                this.playSoundGo();
             }
 			this.setState({
 				go: currentGo,
@@ -136,8 +137,12 @@ class LeaderBoard extends Component {
 		}
     }
     
-    playSound() {
-        const likeAudio = new Audio(like);
+    playSoundGo() {
+        const likeAudio = new Audio(go);
+        likeAudio.play();
+	}
+	playSoundReady() {
+        const likeAudio = new Audio(ready);
         likeAudio.play();
     }
 
@@ -157,7 +162,7 @@ class LeaderBoard extends Component {
 						</button>
 					</div>
 				) : (
-					<div class='starter container mytitle'>
+					<div class='starter container mytitle' onClick={this.playSoundReady}>
 						<h1 class='starter maintitle'>tout le monde</h1>
 						<h1 class='starter mysubtitle'>il est pret ?</h1>
 					</div>

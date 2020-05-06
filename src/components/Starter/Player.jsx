@@ -10,15 +10,15 @@ class Player extends React.Component {
 		let style = {};
 
 		if (!isPresent) {
-			style['opacity'] = '40%';
+			style["opacity"] = "40%";
 		}
 
 		if (isPresent && !isReady) {
-			style['background'] = 'rgb(224, 86, 86)';
+			style["background"] = "rgb(224, 86, 86)";
 		}
 
 		if (isPresent && isReady) {
-			style['background'] = 'rgb(60, 175, 104)';
+			style["background"] = "rgb(60, 175, 104)";
 		}
 
 		return (
@@ -37,13 +37,18 @@ class Player extends React.Component {
 							<h2 class='starter title'>{nom}</h2>
 						</div>
 						<div class='starter column text is-2'>
-							<Checkbox
-								toggle
-								checked={isReady}
-								onClick={() => {
-									toggleReady(nom);
-								}}
-							/>
+							{isPresent ? (
+								<Checkbox
+									toggle
+									checked={isReady}
+									disabled
+									onClick={() => {
+										toggleReady(nom);
+									}}
+								/>
+							) : (
+								<Checkbox toggle checked={false} disabled />
+							)}
 						</div>
 					</div>
 				</div>
