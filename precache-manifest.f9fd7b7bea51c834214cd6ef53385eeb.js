@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2f75e32dff95e2754eb657c46e1493c",
+    "revision": "6b06b9ecf4c0c1404b6e222424b6e657",
     "url": "/TBGTools/index.html"
   },
   {
-    "revision": "b5840a011d9c34502f6a",
-    "url": "/TBGTools/static/css/2.3766ea63.chunk.css"
+    "revision": "d05d5dfbbef0a1e9f798",
+    "url": "/TBGTools/static/css/2.c2c61d59.chunk.css"
   },
   {
     "revision": "7555ffa3e792303c1d27",
     "url": "/TBGTools/static/css/main.d4f1c5bb.chunk.css"
   },
   {
-    "revision": "b5840a011d9c34502f6a",
+    "revision": "d05d5dfbbef0a1e9f798",
     "url": "/TBGTools/static/js/2.b3c7dac9.chunk.js"
   },
   {
