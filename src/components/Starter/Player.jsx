@@ -29,9 +29,10 @@ class Player extends React.Component {
 				<div
 					class='notification starter player-notification'
 					style={style}
-					onClick={() => {
-						isPresent ? toggleReady(nom) : this.doNothing();
-					}}>
+					// onClick={() => {
+					// 	isPresent ? toggleReady(nom) : this.doNothing();
+					// }}
+					>
 					<div class='columns is-vcentered is-desktop'>
 						<div class='starter column is-1'>
 							<Checkbox
