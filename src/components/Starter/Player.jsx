@@ -14,18 +14,23 @@ class Player extends React.Component {
 		}
 
 		if (isPresent && !isReady) {
-			style["background"] = "rgb(224, 86, 86)";
+			style["background"] = "rgb(2384, 77, 77, 0.75)";
 		}
 
 		if (isPresent && isReady) {
-			style["background"] = "rgb(60, 175, 104)";
+			style["background"] = "rgb(61, 198, 113, 0.75)";
 		}
 
 		return (
 			<li>
-				<div class='notification starter player-notification' style={style}>
-					<div class='columns'>
-						<div class='starter column is-2'>
+				<div
+					class='notification starter player-notification'
+					style={style}
+					onClick={() => {
+						toggleReady(nom);
+					}}>
+					<div class='columns is-vcentered is-desktop'>
+						<div class='starter column is-1'>
 							<Checkbox
 								checked={isPresent}
 								onClick={() => {
@@ -33,6 +38,7 @@ class Player extends React.Component {
 								}}
 							/>
 						</div>
+						<div class='starter column is-1'></div>
 						<div class='starter column text is-8'>
 							<h2 class='starter title'>{nom}</h2>
 						</div>
@@ -41,7 +47,6 @@ class Player extends React.Component {
 								<Checkbox
 									toggle
 									checked={isReady}
-									disabled
 									onClick={() => {
 										toggleReady(nom);
 									}}

@@ -1,5 +1,5 @@
 .starter.main {
-	background: rgb(236, 186, 110);
+	background: rgb(206, 206, 206);
 	height: 100%;
 	max-width: 1000px !important;
 }
@@ -87,6 +87,10 @@
 	margin-bottom: 10px;
 }
 
+.starter.player-notification:hover {
+	transform: scaleX(1.02);
+	transition: all 500ms;
+}
 
 .starter.player-img {
 	width: 20%;
@@ -94,19 +98,31 @@
 	vertical-align: middle;
 }
 
-.starter.column{
-    display: inline;
+.starter.column {
+	display: flex;
+  justify-content: center; 
 }
 
 .starter.mytoggle {
-    vertical-align: middle;
+	background-color: black;
 }
 
 .starter.mycheckbox {
-    vertical-align: middle;
-    background: rgb(224, 86, 86);
+	left: 0;
+	background: rgb(224, 86, 86);
 }
 
 .starter.resetbutton {
-    margin-top: 15px;
+	margin-top: 15px;
+}
+
+.columns.is-vcentered {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.ui.toggle.checkbox input:checked ~ .box:before,
+.ui.toggle.checkbox input:checked ~ label:before {
+  background-color: black !important;
 }
