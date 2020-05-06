@@ -79,13 +79,14 @@
 	height: 64px;
 }
 
-.starter.player {
+.starter.player-notification {
 	z-index: 999;
 	width: 65%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
 }
+
 
 .starter.player-img {
 	width: 20%;
