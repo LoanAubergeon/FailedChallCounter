@@ -34,7 +34,8 @@ class LeaderBoard extends Component {
 				let data = [];
 				snapshot.forEach((snap) => {
 					data.push(snap.val());
-				});
+        });
+        data.sort((a, b) => a.value <= b.value);
 				this.setState({ data });
 			});
 		} catch (error) {
@@ -135,7 +136,6 @@ class LeaderBoard extends Component {
 							) : (
 								<ul class='tile is-vertical players'>
 									{this.state.data
-										.sort((a, b) => a.value <= b.value)
 										.map((player, i) => {
 											let style = {};
 											if (this.state.selectedPlayerId === player.id) {
