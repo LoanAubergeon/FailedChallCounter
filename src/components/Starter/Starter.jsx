@@ -39,9 +39,6 @@ class LeaderBoard extends Component {
 				snapshot.forEach((snap) => {
 					data.push(snap.val());
                 });
-                // data.sort(function(x, y) {
-                //     return (x.isPresent === y.isPresent)? 0 : x.isPresent? -1 : 1;
-                // });
 				this.setState({ data });
 			});
 		} catch (error) {
@@ -49,23 +46,23 @@ class LeaderBoard extends Component {
 		}
 	}
 
-	setIsReady(name) {
+	setIsReady(id) {
 		const ref = firebase.database().ref("isReady");
-		const index = this.state.data.findIndex((player) => player.nom === name);
+		const index = this.state.data.findIndex((player) => player.id === id);
 		const currentIsReady = this.state.data[index].isReady;
 		try {
-			ref.child(index).update({ isReady: !currentIsReady });
+			ref.child(id).update({ isReady: !currentIsReady });
 		} catch (error) {
 			console.log(error);
 		}
 	}
 
-	setIsPresent(name) {
+	setIsPresent(id) {
 		const ref = firebase.database().ref("isReady");
-		const index = this.state.data.findIndex((player) => player.nom === name);
+		const index = this.state.data.findIndex((player) => player.id === id);
 		const currentIsPrensent = this.state.data[index].isPresent;
 		try {
-			ref.child(index).update({ isPresent: !currentIsPrensent });
+			ref.child(id).update({ isPresent: !currentIsPrensent });
 		} catch (error) {
 			console.log(error);
 		}
@@ -124,17 +121,11 @@ class LeaderBoard extends Component {
 	}
 
 	resetReadyPlayers() {
-		const ref = firebase.database().ref("isReady");
-		let newState = [...this.state.data];
-
-		newState.forEach((player) => {
-			player.isReady = false;
+		this.state.data.forEach((player) => {
+			if (player.isReady) {
+				this.setIsReady(player.id)
+			}
 		});
-		try {
-			ref.set(newState);
-		} catch (error) {
-			console.log(error);
-		}
     }
     
     playSoundGo() {
@@ -173,11 +164,12 @@ class LeaderBoard extends Component {
 							this.spinner()
 						) : (
 							<ul class='starter tile is-vertical players'>
-								{this.state.data.map((player, i) => {
+								{this.state.data.sort((x, y) =>  (x.isPresent === y.isPresent)? 0 : x.isPresent? -1 : 1).map((player, i) => {
 									return (
 										<Player
 											nom={player.nom}
 											key={i}
+											id={player.id}
 											isReady={player.isReady}
 											isPresent={player.isPresent}
 											togglePresent={this.setIsPresent.bind(this)}

@@ -6,10 +6,11 @@ import { Checkbox } from "semantic-ui-react";
 
 class Player extends React.Component {
 	doNothing() {
+		// eslint-disable-next-line
 		let i = 0;
 	}
 	render() {
-		const { nom, isPresent, togglePresent, isReady, toggleReady } = this.props;
+		const { nom, isPresent, togglePresent, isReady, toggleReady, id } = this.props;
 		let style = {};
 
 		if (!isPresent) {
@@ -38,7 +39,7 @@ class Player extends React.Component {
 							<Checkbox
 								checked={isPresent}
 								onClick={() => {
-									togglePresent(nom);
+									togglePresent(id);
 								}}
 							/>
 						</div>
@@ -52,7 +53,7 @@ class Player extends React.Component {
 									toggle
 									checked={isReady}
 									onClick={() => {
-										toggleReady(nom);
+										toggleReady(id);
 									}}
 								/>
 							) : (
