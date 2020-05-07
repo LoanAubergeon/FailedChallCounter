@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/TBGTools/static/css/main.d4f1c5bb.chunk.css",
-    "main.js": "/TBGTools/static/js/main.66bf44bf.chunk.js",
-    "main.js.map": "/TBGTools/static/js/main.66bf44bf.chunk.js.map",
+    "main.css": "/TBGTools/static/css/main.36c7197f.chunk.css",
+    "main.js": "/TBGTools/static/js/main.21062342.chunk.js",
+    "main.js.map": "/TBGTools/static/js/main.21062342.chunk.js.map",
     "runtime-main.js": "/TBGTools/static/js/runtime-main.91113326.js",
     "runtime-main.js.map": "/TBGTools/static/js/runtime-main.91113326.js.map",
     "static/css/2.c2c61d59.chunk.css": "/TBGTools/static/css/2.c2c61d59.chunk.css",
-    "static/js/2.b3c7dac9.chunk.js": "/TBGTools/static/js/2.b3c7dac9.chunk.js",
-    "static/js/2.b3c7dac9.chunk.js.map": "/TBGTools/static/js/2.b3c7dac9.chunk.js.map",
+    "static/js/2.b98cfc4a.chunk.js": "/TBGTools/static/js/2.b98cfc4a.chunk.js",
+    "static/js/2.b98cfc4a.chunk.js.map": "/TBGTools/static/js/2.b98cfc4a.chunk.js.map",
     "index.html": "/TBGTools/index.html",
-    "precache-manifest.f9fd7b7bea51c834214cd6ef53385eeb.js": "/TBGTools/precache-manifest.f9fd7b7bea51c834214cd6ef53385eeb.js",
+    "precache-manifest.5d461970d368679c290762d14efe7ad8.js": "/TBGTools/precache-manifest.5d461970d368679c290762d14efe7ad8.js",
     "service-worker.js": "/TBGTools/service-worker.js",
     "static/css/2.c2c61d59.chunk.css.map": "/TBGTools/static/css/2.c2c61d59.chunk.css.map",
-    "static/css/main.d4f1c5bb.chunk.css.map": "/TBGTools/static/css/main.d4f1c5bb.chunk.css.map",
-    "static/js/2.b3c7dac9.chunk.js.LICENSE.txt": "/TBGTools/static/js/2.b3c7dac9.chunk.js.LICENSE.txt",
+    "static/css/main.36c7197f.chunk.css.map": "/TBGTools/static/css/main.36c7197f.chunk.css.map",
+    "static/js/2.b98cfc4a.chunk.js.LICENSE.txt": "/TBGTools/static/js/2.b98cfc4a.chunk.js.LICENSE.txt",
     "static/media/Boutin.png": "/TBGTools/static/media/Boutin.d08076dc.png",
     "static/media/Jambe.png": "/TBGTools/static/media/Jambe.7a2f115c.png",
     "static/media/JeanD.png": "/TBGTools/static/media/JeanD.55eff395.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.91113326.js",
     "static/css/2.c2c61d59.chunk.css",
-    "static/js/2.b3c7dac9.chunk.js",
-    "static/css/main.d4f1c5bb.chunk.css",
-    "static/js/main.66bf44bf.chunk.js"
+    "static/js/2.b98cfc4a.chunk.js",
+    "static/css/main.36c7197f.chunk.css",
+    "static/js/main.21062342.chunk.js"
   ]
 }
