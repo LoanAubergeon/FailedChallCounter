@@ -4,6 +4,7 @@ import "bulma/css/bulma.css";
 import config from "../Config/config";
 import * as firebase from "firebase";
 
+import Home from '../Home/Home'
 import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import Starter from '../Starter/Starter'
 import Tabs from "../Tabs/Tabs";
@@ -21,13 +22,13 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<Tabs>
-					<div label='Home'>
-						Kikou
+					<div class='content' label='Home'>
+						<Home />
 					</div>
-					<div label='LeaderBoard'>
+					<div class='content' label='LeaderBoard'>
 						<LeaderBoard />
 					</div>
-					<div label='Go?'>
+					<div class='content' label='Go?'>
 						<Starter />
 					</div>
 				</Tabs>

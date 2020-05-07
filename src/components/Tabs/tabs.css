@@ -1,3 +1,16 @@
 .tabs {
-    margin-bottom: 0rem !important;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%; 
+    margin: auto;
+    top: 0;
+    opacity: 0.9;
+    background: white;
+}
+
+.content {
+    margin-top: 40px;
 }
