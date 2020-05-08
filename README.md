@@ -8,8 +8,9 @@
 * [Create-react-app](https://github.com/facebook/create-react-app) - Initialization tools
 * [Firebase](https://firebase.google.com) - Database
 * [react-gh-pages](https://github.com/gitname/react-gh-pages) - Utils
-* [npm] 
-* [Semantic-ui]
+* [npm](https://www.npmjs.com) -  Package manager 
+* [Semantic-ui](https://semantic-ui.com) - CSS framework
+* [React-spinners](https://www.davidhu.io/react-spinners/) - Spinners
 
 
 ## How to build
