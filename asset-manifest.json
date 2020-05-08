@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TBGTools/static/css/main.8a52af62.chunk.css",
-    "main.js": "/TBGTools/static/js/main.b1cf7484.chunk.js",
-    "main.js.map": "/TBGTools/static/js/main.b1cf7484.chunk.js.map",
+    "main.js": "/TBGTools/static/js/main.0aaa3fb8.chunk.js",
+    "main.js.map": "/TBGTools/static/js/main.0aaa3fb8.chunk.js.map",
     "runtime-main.js": "/TBGTools/static/js/runtime-main.91113326.js",
     "runtime-main.js.map": "/TBGTools/static/js/runtime-main.91113326.js.map",
     "static/css/2.c2c61d59.chunk.css": "/TBGTools/static/css/2.c2c61d59.chunk.css",
     "static/js/2.7b97d162.chunk.js": "/TBGTools/static/js/2.7b97d162.chunk.js",
     "static/js/2.7b97d162.chunk.js.map": "/TBGTools/static/js/2.7b97d162.chunk.js.map",
     "index.html": "/TBGTools/index.html",
-    "precache-manifest.89aca8b56df826676a5d4758c52e3bf3.js": "/TBGTools/precache-manifest.89aca8b56df826676a5d4758c52e3bf3.js",
+    "precache-manifest.0910ece3c85d71f449c036be1a97117d.js": "/TBGTools/precache-manifest.0910ece3c85d71f449c036be1a97117d.js",
     "service-worker.js": "/TBGTools/service-worker.js",
     "static/css/2.c2c61d59.chunk.css.map": "/TBGTools/static/css/2.c2c61d59.chunk.css.map",
     "static/css/main.8a52af62.chunk.css.map": "/TBGTools/static/css/main.8a52af62.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.c2c61d59.chunk.css",
     "static/js/2.7b97d162.chunk.js",
     "static/css/main.8a52af62.chunk.css",
-    "static/js/main.b1cf7484.chunk.js"
+    "static/js/main.0aaa3fb8.chunk.js"
   ]
 }
