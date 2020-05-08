@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d5dcfa6cc367ec56f03bdc19df6c690",
+    "revision": "cdc83fed63d4391e3982c2439fe38984",
     "url": "/TBGTools/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TBGTools/static/css/2.c2c61d59.chunk.css"
   },
   {
-    "revision": "393988b3cd071354577c",
-    "url": "/TBGTools/static/css/main.36c7197f.chunk.css"
+    "revision": "a970a058991c148c3d03",
+    "url": "/TBGTools/static/css/main.8a52af62.chunk.css"
   },
   {
     "revision": "dc942af9ea8b44fe03bf",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TBGTools/static/js/2.7b97d162.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "393988b3cd071354577c",
-    "url": "/TBGTools/static/js/main.78d3298b.chunk.js"
+    "revision": "a970a058991c148c3d03",
+    "url": "/TBGTools/static/js/main.b1cf7484.chunk.js"
   },
   {
     "revision": "4027e7005ad485c23865",
