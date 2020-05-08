@@ -34,8 +34,10 @@ class LeaderBoard extends Component {
 				let data = [];
 				snapshot.forEach((snap) => {
 					data.push(snap.val());
-        });
-        data.sort((a, b) => a.value <= b.value);
+				});
+				data.sort(function (a, b) {
+					return b.value - a.value
+				});
 				this.setState({ data });
 			});
 		} catch (error) {
@@ -70,8 +72,8 @@ class LeaderBoard extends Component {
 	getBottomBar() {
 		const id = this.state.selectedPlayerId;
 		const playerIndex = this.state.data.findIndex((player) => player.id === id);
-    const player = this.state.data[playerIndex];
-    
+		const player = this.state.data[playerIndex];
+
 		return id !== -1 ? (
 			<div class='notification selector'>
 				<div class='columns'>
@@ -135,28 +137,27 @@ class LeaderBoard extends Component {
 								this.spinner()
 							) : (
 								<ul class='tile is-vertical players'>
-									{this.state.data
-										.map((player, i) => {
-											let style = {};
-											if (this.state.selectedPlayerId === player.id) {
-                        style["box-shadow"] = "0px 0px 5px black";
-                        style["transform"] = "scaleX(1.05)";
-                      }
-                      if (i === 0) {
-                        style["background-color"] = "rgb(212,175,55)"
-                      }
-											return (
-												<Player
-                          index={i}
-													nom={player.nom}
-													id={player.id}
-													value={player.value}
-													selectPlayer={this.selectPlayer.bind(this)}
-													key={player.id}
-													style={style}
-												/>
-											);
-										})}
+									{this.state.data.map((player, i) => {
+										let style = {};
+										if (this.state.selectedPlayerId === player.id) {
+											style["box-shadow"] = "0px 0px 5px black";
+											style["transform"] = "scaleX(1.05)";
+										}
+										if (i === 0) {
+											style["background-color"] = "rgb(212,175,55)";
+										}
+										return (
+											<Player
+												index={i}
+												nom={player.nom}
+												id={player.id}
+												value={player.value}
+												selectPlayer={this.selectPlayer.bind(this)}
+												key={player.id}
+												style={style}
+											/>
+										);
+									})}
 								</ul>
 							)}
 						</div>
