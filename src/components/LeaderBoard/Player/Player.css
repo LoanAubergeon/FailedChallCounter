@@ -1,5 +1,5 @@
 .player {
-	z-index: 999;
+	z-index: 0;
 	width: 65%;
 	margin-left: auto;
 	margin-right: auto;
