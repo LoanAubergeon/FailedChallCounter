@@ -1,9 +1,7 @@
 # Team Boulding Gaming Tools
 
-Dofus Tools 
 
 ## Built With
-------------
 
 * [ReactJS](https://fr.reactjs.org) - The web framework used
 * [Bulma](https://bulma.io) - CSS framework
@@ -13,8 +11,8 @@ Dofus Tools
 * [npm] 
 * [Semantic-ui]
 
+
 ## How to build
-------------
 
 npm:
 
@@ -29,8 +27,8 @@ Add firebase config file in `src/components/Config/config.js` (see configExample
 $ npm start
 ```
 
+
 ## Contributing
-------------
 
 Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
 
@@ -42,21 +40,20 @@ Please refer to each project's style and contribution guidelines for submitting 
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
+
 ## Help 
-------------
 
 * Star and Fork
 * Post any issues you find
 * Post new feature requests
 * Pull requests are welcome
 
+
 ## Authors
-------------
 
 * **Loan Aubergeon** - *Initial work* 
 
 
 ## License
-------------
 
 This project is licensed under the MIT License.
