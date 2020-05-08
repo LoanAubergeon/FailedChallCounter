@@ -62,6 +62,10 @@ class LeaderBoard extends Component {
 		const index = this.state.data.findIndex((player) => player.id === id);
 		const currentIsPrensent = this.state.data[index].isPresent;
 		try {
+			// if isReady and set isPresent to false, set isReady to false !
+			if (currentIsPrensent) {
+				ref.child(id).update({ isPresent: !currentIsPrensent, isReady: false });
+			}
 			ref.child(id).update({ isPresent: !currentIsPrensent });
 		} catch (error) {
 			console.log(error);
